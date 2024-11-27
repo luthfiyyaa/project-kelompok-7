@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
-
 route::get('/' , [FrontController::class, 'index'])->name('front.index');
 route::get('/login-guest' , [FrontController::class, 'loginGuest'])->name('front.login-guest');
 route::post('/guestlogin', [FrontController::class, 'guestLogin'])->name('front.guestLogin');

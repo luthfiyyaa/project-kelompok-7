@@ -12,9 +12,8 @@
         }
 
         body {
-            
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #f3ece5;
+            color: #2f3a27;
             text-align: left;
             margin: 0;
             padding: 0;
@@ -25,7 +24,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -57,11 +56,11 @@
 
         /* Profile Card Styles */
         .profile-card {
-            background-color: #f5f7f6;
+            background-color: #798466;
             border-radius: 20px;
             padding: 40px;
             margin: 40px auto;
-            width: 60%;
+            width: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,10 +78,11 @@
         .profile-info h2 {
             font-size: 24px;
             margin-bottom: 20px;
+            color: #F3ece5;
         }
 
         .profile-info .info {
-            background-color: #d3d3d3;
+            background-color: #F3ece5;
             border-radius: 10px;
             padding: 10px 20px;
             margin-bottom: 10px;
@@ -91,7 +91,7 @@
 
         /* Form Styles */
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 0 20px;
             text-align: left;
             width: 100%;
         }
@@ -126,12 +126,13 @@
         }
 
         .message-thread {
-            background-color: #f5f7f6;
+            background-color: #ABBA7C;
             border-radius: 10px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 20px;
             width: 100%;
             box-sizing: border-box;
+            font-weight: 500;
         }
 
         .attachment-container {
@@ -181,7 +182,7 @@
         }
 
         .create-message-btn {
-            background-color: #d3d3d3;
+            background-color: #644934;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -192,15 +193,16 @@
             align-items: center;
             gap: 8px;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
         .create-message-btn:hover {
-            background-color: #999696;
+            background-color: #8b6548;
         }
 
         .btn {
-            background-color: #d3d3d3;
-            color: white;
+            background-color: #F3ece5;
+            color: black;
             padding: 12px 24px;
             border: none;
             border-radius: 10px;
@@ -211,30 +213,17 @@
             width: auto;
             height: auto;
             transition: background-color 0.3s ease;
-            margin: 10px;
+            margin: 20px 10px 0 0;
         }
 
         .btn:hover {
-            background-color: #999696;
+            background-color: #f1dcc7;
         }
 
-        /* Rest of your existing styles */
-        /* Reset and Base Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            text-align: left;
-            margin: 0;
-            padding: 0;
+        .dashboard-title {
+            color: #798466;
         }
 
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
     </style>
 </head>
 <body>
@@ -250,7 +239,7 @@
     <div class="dashboard-title">Dashboard Guest</div>
     
     <div class="profile-card">
-        <i class="fas fa-user-circle" style="font-size: 150px;""></i>
+        <i class="fas fa-user-circle" style="font-size: 150px;"></i>
         <div class="profile-info">
             <h2>Profile</h2>
             <div class="info">{{ session('nama_guest') ?? 'Guest' }}</div>
@@ -270,8 +259,6 @@
     <div class="messages-section">
         @forelse ($pesan as $item)    
             <div class="message-thread" id="message-{{ $item->id_pesan }}">
-                
-
                 <div class="message-main">
                     <div class="form-group">
                         <label for="guest_name_{{ $item->id }}">Guest</label>
@@ -336,7 +323,6 @@
                             </button>
                         </form>
                     </div>
-                <!-- Replies section remains the same -->
             </div>
         @empty
             <div class="message-thread">

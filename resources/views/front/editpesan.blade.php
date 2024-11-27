@@ -9,7 +9,7 @@
         /* Reset and Base Styles */
         body {
             font-family: "Montserrat", serif;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             color: #000000;
             margin: 0;
             padding: 0;
@@ -20,7 +20,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -34,6 +34,8 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #798466;
+            border-radius: 10px;
         }
 
         .form-group {

@@ -8,25 +8,27 @@
         body {
             font-family: "Montserrat", serif;
             text-align: center;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             margin: 0;
             padding: 0;
-            color: #000000;
+            color: #2f3a27;
         }
         .container {
             max-width: 600px;
             margin: 30px auto;
-            padding: 20px;
+            padding: 30px 50px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start; /* Nama di kiri, role di kanan */
+            background-color: #798466;
+            border-radius: 15px;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -38,46 +40,49 @@
         .welcome {
             font-size: 48px;
             font-weight: bold;
-            margin-top: 50px;
-            color: #000000;
+            margin: 50px;
+            color: #798466;
         }
         .names {
             font-family: 'Great Vibes', cursive;
             font-size: 60px;
             margin: 20px 0;
-            text-align: center; /* Nama tetap rata kiri */
-            color: #000000;
-
+            text-align: center; 
+            color: #D8D2C2;
+            padding: 0 50px;
         }
         .role-selection {
             margin-top: 20px;
             display: flex;
             flex-direction: column; /* Role dibuat vertikal */
             align-items: center;
+            padding: 0 50px;
         }
         .role-selection h2 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
+            color: #D8D2C2;
         }
         .role-selection button {
             font-size: 18px;
             padding: 10px 20px;
             margin: 10px 0; /* Jarak antar tombol */
-            border: none;
+            border: 5px;
             border-radius: 5px;
-            background-color:#ccc;
+            background-color:#D8D2C2;
             cursor: pointer;
             width: 200px; /* Ukuran tombol konsisten */
             text-align: center;
         }
         .role-selection button a {
+            font-weight: bold;
             text-decoration: none;
-            color: #000;
+            color: #845538;
             display: block; /* Area tautan mencakup seluruh tombol */
         }
         .role-selection button:hover {
-            background-color: #b4b3b3;
+            background-color: #2F3A27;
         }
     </style>
 </head>

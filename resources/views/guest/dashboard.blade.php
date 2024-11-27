@@ -9,7 +9,7 @@
         /* Reset and Base Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             color: #000000;
             text-align: left;
             margin: 0;

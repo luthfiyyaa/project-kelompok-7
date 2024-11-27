@@ -12,10 +12,10 @@
         body {
             font-family: "Montserrat", serif;
             text-align: center;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             margin: 0;
             padding: 0;
-            color: #000000;
+            color: #2f3a27;
         }
 
         .container {
@@ -31,7 +31,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -46,24 +46,24 @@
             font-family: 'Great Vibes', cursive;
             font-size: 48px;
             margin: 10px 0 40px 0;
-            color: #333;
+            color: #798466;
             line-height: 1.4;
         }
 
         /* Login Box Styles */
         .login-box {
-            background-color: #f8f8f8;
             padding: 20px;
-            border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             height: 300px;
+            background-color: #798466;
+            border-radius: 15px;
         }
 
         .login-box h2 {
-            font-size: 24px;
+            font-size: 30px;
             margin-bottom: 25px;
-            color: #333;
+            color: #D8D2C2;
             text-align: center;
             margin-top: 30px;
         }
@@ -86,8 +86,8 @@
         .login-box button {
             width: 80%;
             padding: 12px;
-            background-color: #333;
-            color: white;
+            background-color: #D8D2C2;
+            color: #845538;
             border: none;
             border-radius: 8px;
             font-size: 16px;
@@ -97,7 +97,7 @@
         }
 
         .login-box button:hover {
-            background-color: #444;
+            background-color: #2F3A27;
         }
 
         /* Alert Styles */
@@ -158,7 +158,7 @@
 
             <form action="{{ route('front.guestLogin') }}" method="POST">
                 @csrf
-                <h2>Log In</h2>
+                <h2>Log In!</h2>
                 <input 
                     name="nama" 
                     type="text" 

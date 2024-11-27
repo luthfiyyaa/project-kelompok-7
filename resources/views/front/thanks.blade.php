@@ -11,14 +11,14 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f3ece5;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -34,6 +34,7 @@
             font-size: 48px;
             font-weight: 700;
             margin: 0;
+            color: #798466;
         }
         .content p {
             font-size: 18px;
@@ -43,6 +44,7 @@
             font-family: 'Great Vibes', cursive;
             font-size: 50px;
             margin-top: 50px;
+            color: #798466;
         }
     </style>
 </head>

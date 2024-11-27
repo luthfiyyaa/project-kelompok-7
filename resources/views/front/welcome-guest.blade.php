@@ -8,7 +8,7 @@
         body {
             font-family: "Montserrat", serif;
             text-align: center;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             margin: 0;
             padding: 0;
         }

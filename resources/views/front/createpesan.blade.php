@@ -11,8 +11,8 @@
         body {
             font-family: "Montserrat", serif;
             text-align: center;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #f3ece5;
+            color: #2f3a27;
         }
         .container {
             max-width: 600px;
@@ -25,7 +25,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -35,11 +35,12 @@
             font-weight: bold;
         }
         .user-info {
-            background-color: #f5f5f5;
-            padding: 10px;
+            background-color: #798466;
+            padding: 10px 20px;
             border-radius: 5px;
             margin-bottom: 20px;
             text-align: left;
+            color: #ffffff;
         }
         h1 {
             font-size: 24px;
@@ -50,7 +51,7 @@
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 30px;
-            color: #333;
+            color: #EEE2B5;
         }
         form {
             display: flex;
@@ -62,11 +63,12 @@
             font-size: 18px;
             margin: 10px 0 5px;
             font-weight: bold;
+            color: #EEE2B5;
         }
         input[type="text"], textarea {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
@@ -76,6 +78,7 @@
             height: 150px;
             resize: vertical;
         }
+        /* Container untuk attachment */
         .attachment {
             display: flex;
             align-items: center;
@@ -91,15 +94,15 @@
             padding: 15px;
             border: none;
             border-radius: 5px;
-            background-color: #333;
-            color: white;
+            background-color: #F3ece5;
+            color: #B17457;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         .submit-button:hover {
-            background-color: #555;
+            background-color: #816153;
         }
         .alert {
             padding: 15px;
@@ -116,6 +119,12 @@
             background-color: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
+        }
+
+        .message {
+            background-color: #ABBA7C;
+            padding: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -135,47 +144,48 @@
             <p><strong>Name:</strong> {{ session('nama_guest') }}</p>
         </div>
 
-        <h1>GUESTBOOK</h1>
-        <h2>Send Your Message</h2>
+        <div class="message">
+            <h2>Send Your Message!</h2>
 
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
 
-        @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
+            @if(session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
 
-        <form action="{{ route('pesan.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="code_guest" value="{{ session('kode_guest') }}">
-            
-            <label for="isi">Message</label>
-            <textarea id="isi" 
-                      name="isi" 
-                      placeholder="Fill out your message here!" 
-                      required>{{ old('isi') }}</textarea>
-            @error('isi')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            
-            <label for="lampiran">Attachment</label>
-            <div class="attachment">
-                <input type="file" 
-                       id="lampiran" 
-                       name="lampiran" 
-                       accept="image/*">
-            </div>
-            @error('lampiran')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
+            <form action="{{ route('pesan.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="code_guest" value="{{ session('kode_guest') }}">
+                
+                <label for="isi">Message</label>
+                <textarea id="isi" 
+                        name="isi" 
+                        placeholder="Fill out your message here!" 
+                        required>{{ old('isi') }}</textarea>
+                @error('isi')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                
+                <label for="lampiran">Attachment</label>
+                <div class="attachment">
+                    <input type="file" 
+                        id="lampiran" 
+                        name="lampiran" 
+                        accept="image/*">
+                </div>
+                @error('lampiran')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
