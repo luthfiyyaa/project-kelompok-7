@@ -38,8 +38,13 @@
             border-radius: 10px;
         }
 
+        h1{
+            color: #f3ece5;
+        }
+
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #f3ece5;
         }
 
         label {
@@ -67,26 +72,28 @@
         }
 
         .btn-primary {
-            background-color: #cfcfcf;
+            background-color: #B17457;
             color: white;
         }
 
         .btn-primary:hover { 
-            background-color: #777777;
+            background-color: #845538;
         }
 
         .btn-secondary {
-            background-color: #6c757d;
+            background-color: #B17457;
             color: white;
             margin-left: 10px;
         }
 
         .btn-secondary:hover { 
-            background-color: #b6b6b6;
+            background-color: #845538;
         }
 
         .attachment-preview {
-            margin-top: 20px;
+            margin-top: 10px;
+            color: #f3ece5;
+            margin-bottom: 20px;
         }
 
         .attachment-preview img {

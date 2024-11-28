@@ -7,7 +7,7 @@
         /* Reset and Base Styles */
         body {
             font-family: "Montserrat", serif;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -17,7 +17,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -58,32 +58,21 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
+            color: #798466;
         }
-        .message-box {
-            background-color: #e0e0e0;
+        
+        .message-thread {
+            background-color: #798466;
             border-radius: 10px;
             padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
-            text-align: left;
+            margin-bottom: 20px;
         }
-        .message-box label {
-            display: block;
-            margin-bottom: 10px;
+        .form-group{
+            margin: 0 0;
+        }
+        .form-group label {
+            color: #f3ece5;
             font-weight: bold;
-        }
-        .message-box input[type="text"],
-        .message-box textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f0f0f0;
-        }
-        .message-box textarea {
-            height: 100px;
         }
         .attachment {
             width: 100%;
@@ -99,7 +88,7 @@
             color: #888888;
         }
         .reply-button {
-            background-color: #d3d3d3;
+            background-color: #ABBA7C;
             color: white;
             border: none;
             border-radius: 5px;
@@ -112,7 +101,7 @@
             transition: background-color 0.3s;
         }
         .reply-button:hover {
-            background-color: #636060;
+            background-color: #798466;
         }
         .no-replies {
             padding: 15px;
@@ -123,9 +112,9 @@
         }
         .replies-container {
             margin-top: 20px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
+            padding: 10px;
+            background-color: #f3ece5;
+            border-radius: 10px;
         }
         .reply-item {
             padding: 10px;
@@ -151,9 +140,9 @@
             <i class="fas fa-user"></i>
         </a>
     </div>
-    <div class="container">
-        <div class="welcome">Welcome, {{ session('nama') }}</div>
+        <div class="welcome">Welcome Admin! {{ session('nama') }}</div>
 
+    <div class="container">
         <div class="messages-section">
             @forelse ($pesan as $item)    
             <div class="message-thread">

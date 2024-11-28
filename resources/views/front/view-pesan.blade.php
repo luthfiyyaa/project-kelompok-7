@@ -6,7 +6,7 @@
         /* Reset and Base Styles */
         body {
             font-family: "Montserrat", serif;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             color: #000000;
             text-align: center;
             margin: 0;
@@ -22,7 +22,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -31,10 +31,11 @@
             font-size: 24px;
             font-weight: bold;
         }
-        h1 {
-            font-size: 48px;
+        h2 {
+            font-size: 32px;
             font-weight: bold;
             margin: 20px 0;
+            color:#798466;
         }
         label {
             display: block;
@@ -49,6 +50,16 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #f0f2f1;
+        }
+        .message-thread {
+            background-color: #798466;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .message-main {
+            color: #f3ece5;
+            font-weight: bold;
         }
         .attachment {
             width: 100%;
@@ -93,6 +104,7 @@
             <i class="fas fa-user"></i>
         </a>
     </div>
+    <h2>All Messages</h2>
     <div class="container">
         <div class="messages-section">
             @forelse ($pesan as $item)    

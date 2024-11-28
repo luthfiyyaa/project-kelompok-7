@@ -7,21 +7,24 @@
         body {
             font-family: "Montserrat", serif;
             text-align: center;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             color: #000000;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 10px auto;
             padding: 20px;
-            
+            background-color: #798466;
+            border-radius: 10px;
+            color: #f3ece5;
+            font-weight: bold;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            color: #000000;
+            color: #B17457;
         }
         .header i {
             font-size: 24px;
@@ -39,6 +42,7 @@
             font-size: 36px;
             font-weight: bold;
             margin: 20px 0;
+            color: #798466;
         }
         .form-group {
             text-align: left;
@@ -66,13 +70,16 @@
             justify-content: flex-end;
         }
         .submit-btn button {
-            background-color: #000000;
+            background-color: #B17457;
             color: #ffffff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .submit-btn button:hover {
+            background-color: #845538;
         }
         /* Tambahan style untuk link di dalam button */
         .submit-btn button a {
@@ -91,8 +98,9 @@
         </a>
     </div>
 
+    <h2>Reply!</h2>
+
     <div class="container">
-        <h2>Reply!</h2>
         <form action="{{ route('balasan.store') }}" method="POST">
             @csrf
             {{-- Hidden input untuk code_admin dari session --}}
@@ -113,7 +121,7 @@
             
             <div class="form-group">
                 <label for="isi_balasan">Your Reply</label>
-                <textarea id="isi_balasan" name="isi_balasan" required></textarea>
+                <textarea id="isi_balasan" name="isi_balasan" required placeholder="Tulis balasanmu di sini"></textarea>
             </div>
 
             <div class="submit-btn">

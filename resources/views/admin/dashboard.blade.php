@@ -10,7 +10,7 @@
         /* Reset and Base Styles */
         body {
             font-family: "Montserrat", serif;
-            background-color: #ffffff;
+            background-color: #f3ece5;
             color: #000000;
             text-align: center;
             margin: 0;
@@ -21,6 +21,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            color: #B17457;
+            font-weight: bold;
+            font-size:24px;
         }
         .header i {
             font-size: 24px;
@@ -77,7 +80,7 @@
             margin-top: 20px;
         }
         .profile-card {
-            background-color: #f5f7f6;
+            background-color: #798466;
             border-radius: 20px;
             padding: 40px;
             margin: 40px auto;
@@ -95,19 +98,33 @@
         .profile-info {
             text-align: center;
         }
+
         .profile-info h2 {
             font-size: 24px;
             margin-bottom: 20px;
+            color: #F3ece5;
         }
+
         .profile-info .info {
-            background-color: #d3d3d3;
+            background-color: #F3ece5;
             border-radius: 10px;
             padding: 10px 20px;
             margin-bottom: 10px;
             font-size: 18px;
         }
+        .message-thread {
+            background-color: #798466;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .message-main {
+            color: #f3ece5;
+            font-weight: bold;
+            width: 95%;
+        }
         .reply-button {
-            background-color: #d3d3d3;
+            background-color: #ABBA7C;
             color: white;
             border: none;
             border-radius: 5px;
@@ -120,7 +137,7 @@
             transition: background-color 0.3s;
         }
         .reply-button:hover {
-            background-color: #636060;
+            background-color: #798466;
         }
         .no-replies {
             padding: 15px;
@@ -151,7 +168,6 @@
     </style>
 </head>
 <body>
-    </header>
     <div class="header">
         <a href="{{ route('front.index') }}"><i class="fas fa-home"></i></a>
         <div class="title">GUESTBOOK</div>
