@@ -24,11 +24,11 @@
             border-radius: 15px;
         }
         .header {
-            display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
             color: #B17457;
+            text-align: center;
         }
         .header i {
             font-size: 24px;
@@ -88,12 +88,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="{{ route('front.index') }}"><i class="fas fa-home"></i></a>
         <div class="title">GUESTBOOK</div>
-        <!-- Menu Dashboard Dinamis -->
-        <a href="{{ session('id_admin') ? route('admin.dashboard') : route('front.dashboard') }}">
-            <i class="fas fa-user"></i>
-        </a>
     </div>
     <div class="welcome">Welcome!</div>
     <div class="container">
